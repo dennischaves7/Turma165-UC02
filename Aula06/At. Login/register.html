@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro</title>
+</head>
+<body bgcolor="black" text="white">
+
+  <main style="max-width: 600px; margin: 0 auto; padding: 20px;">
+    <h1 style="text-align: center;">Cadastre-se</h1>
+
+    <form action="login.html" method="get">
+      <fieldset >
+        <legend>Informações Pessoais</legend>
+
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+
+        <label for="dataNascimento">Data de Nascimento:</label><br>
+        <input type="date" id="dataNascimento" name="dataNascimento" required><br><br>
+
+        <label for="telefone">Telefone:</label><br>
+        <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required><br><br>
+
+        <label for="endereco">Endereço:</label><br>
+        <input type="text" id="endereco" name="endereco" placeholder="Rua, número, bairro" required><br><br>
+
+        <label for="estado">Estado:</label><br>
+        <select id="estado" name="estado" required>
+          <option value="">Selecione</option>
+          <option>Rio Grande do Norte</option>
+          <option>Rio Grande do Sul</option>
+          <option>Rio de Janeiro</option>
+          <option>São Paulo</option>
+          <option>Pernambuco</option>
+        </select><br><br>
+        <label>Gênero:</label><br>
+        <input type="radio" id="masculino" name="genero" value="Masculino">
+        <label for="masculino">Masculino</label><br>
+
+        <input type="radio" id="feminino" name="genero" value="Feminino">
+        <label for="feminino">Feminino</label><br>
+
+        <input type="radio" id="outro" name="genero" value="Outro" disabled>
+        <label for="outro">Outro</label><br><br>
+
+        
+      </fieldset>
+
+      <br>
+
+      <fieldset >
+        <legend>Segurança</legend>
+
+        <label for="senha">Senha:</label><br>
+        <input type="password" id="senha" name="senha" required><br><br>
+
+        <label for="confirmeSenha">Confirme a Senha:</label><br>
+        <input type="password" id="confirmeSenha" name="confirmeSenha" required><br><br>
+      </fieldset>
+
+      <br>
+
+      <input type="checkbox" id="termos" name="termos" required>
+      <label for="termos">Aceito os termos de uso</label>
+
+      <br>
+
+      <div style="text-align: center;">
+        <input type="submit" value="Cadastrar" style="padding: 10px 20px; font-size: 16px;">
+      </div>
+    </form>
+  </main>
+
+</body>
+</html>
