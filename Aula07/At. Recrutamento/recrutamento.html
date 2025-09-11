@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recrutamento</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <img src="Logo.png" alt="">
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="">Início</a></li>
+            <li><a href="">Sobre</a></li>
+            <li><a href="">Vagas</a></li>
+            <li><a href="">Contato</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section>
+            <h2>Recrutamento</h2>
+            <p>Preencha o formulário abaixo para se candidatar à vaga de Desenvolvedor Web na SifiTech.</p>
+        </section>
+
+        <section class="formulario">
+            <form action="agradecimento.html" method="get">
+                <label for="nome">Nome completo:</label>
+                <input type="text" id="nome" name="nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="idade">Idade:</label>
+                <input type="number" id="idade" name="idade" min="18" max="99" required>
+
+                <label for="data">Data de nascimento:</label>
+                <input type="date" id="data" name="data" required>
+
+                <label for="linkedin">Perfil do LinkedIn:</label>
+                <input type="url" id="linkedin" name="linkedin" placeholder="https://linkedin.com/in/seu-perfil">
+
+                <label for="curriculo">Currículo:</label>
+                <input class="curriculo" type="file" id="curriculo" name="curriculo" required>
+
+                <label for="mensagem">Por que você quer trabalhar conosco?</label>
+                <textarea id="mensagem" name="mensagem" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 SifiTech. Todos os direitos reservados.</p>
+    </footer>
+
+</body>
+
+</html>
