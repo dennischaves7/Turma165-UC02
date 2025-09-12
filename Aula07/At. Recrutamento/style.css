@@ -12,13 +12,11 @@ body {
     line-height: 1.6;
 }
 
-header {
+header { 
     background-color: #222222;
     color: white;
     padding: 10px;
     text-align: center;
-
-
 }
 
 nav {
@@ -69,9 +67,7 @@ form textarea {
     border: 1px solid #ccc;
 }
 
-.curriculo {
-    text-decoration: #3d3636;
-}
+
 
 form button {
     width: 100%;

@@ -1,0 +1,18 @@
+
+h1{
+    text-align: center;
+    margin: 30px auto;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+p {
+    font-size: 20px
+}
+
+#laranja {
+    color: orange;
+    font-weight: bold;
+    margin: 10;
+   
+}
