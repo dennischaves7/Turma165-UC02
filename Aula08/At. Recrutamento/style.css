@@ -12,7 +12,7 @@ body {
     line-height: 1.6;
 }
 
-header { 
+header {
     background-color: #222222;
     color: white;
     padding: 10px;
@@ -25,13 +25,13 @@ nav {
     box-shadow: 0 8px 20px #1d1d1d;
 }
 
-nav ul {
+ul {
     display: flex;
     justify-content: center;
     padding: 10px;
 }
 
-nav ul li a {
+ul li a {
     color: white;
     margin: 15px;
     text-decoration: none;
@@ -52,24 +52,25 @@ h2 {
     margin-bottom: 10px;
 }
 
-form label {
+label {
     display: block;
     margin-top: 15px;
     font-weight: bold;
 }
 
-form input,
-form textarea {
+input,
+textarea {
     width: 100%;
     padding: 10px;
     margin-top: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    outline: none;
 }
 
 
 
-form button {
+button {
     width: 100%;
     padding: 12px;
     margin-top: 20px;
