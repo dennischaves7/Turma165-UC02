@@ -1,0 +1,24 @@
+div {
+    font-size: 2rem;
+}
+
+.pixel {
+    font: 20px verdana, arial, tahoma, sans-serif;
+}
+
+.roottipografica {
+    font: 2rem verdana, arial, tahoma, sans-serif;
+}
+
+body{
+   height: 100vh;
+   width: 100vw;
+}
+
+main {
+    text-align: center;
+    background-color: beige;
+    border-radius: 2rem;
+    margin: 10rem 10rem auto;
+    padding: 2rem;
+}
