@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: grid;
+    justify-content: center;   
+    align-items: center;                    
+    background-color: #333;   
+}
+
+
+.grid-container {
+    border-radius: 20px;
+    display: grid;
+    background-color:#3a3a3a;
+    margin: 10px auto;
+    padding: .3125rem;
+    color: aliceblue;
+    grid-template-columns:6.25rem 6.25rem 6.25rem;
+    grid-template-rows: 6.25rem 6.25rem 6.25rem;
+    gap: 16px;
+    width: 37.5rem;
+    height:  25rem;
+    justify-content: center;
+    align-content: center;
+    justify-items: center;
+    align-items: baseline;
+}
+
+.grid-item {
+    height: 80px;
+    background-color: aquamarine;
+    color: black;
+    margin: 10px;
+    padding: 20px;
+}
