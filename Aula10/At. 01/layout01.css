@@ -28,7 +28,6 @@ body {
     text-align: center;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
 }
 
 .card-blue {
@@ -49,9 +48,9 @@ body {
 
 .title,
 .title-blue {
+    font-size: 20px;
     font-weight: bold;
     margin-bottom: 10px;
-    letter-spacing: 1px;
 }
 
 .title-blue {
@@ -61,6 +60,7 @@ body {
 .text {
     font-size: 14px;
     margin-bottom: 15px;
+    font-style: italic;
     line-height: 1.5;
 }
 
