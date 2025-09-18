@@ -14,43 +14,46 @@ body {
 .container {
     display: grid;
     height: 100vh;
-    align-content: center;
+    align-content: end;
     grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 50px;
+    gap: 1.25rem;
+    padding: 3.125rem;
     margin: 0 auto;
     background: linear-gradient(white 50%, #E0E5EB 50%);
 }
 
 .card-blue,
 .card-white {
-    padding: 30px 20px;
+    height: 31.25rem;
+    padding: 1.875rem 1.25rem;
+align-content: center;
+    align-items: center;
     text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.1);
 }
 
 .card-blue {
     background-color: #3375f2;
     color: white;
+    margin: 3.75rem 0;
 }
 
 .card-white {
     background-color: white;
-    color: #333;
+    margin-top: -3.75rem;
 }
 
 .icon {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 15px;
+    width: 7.5rem;
+    height: 6.25rem;
+    margin-bottom: .9375rem;
 }
 
 .title,
 .title-blue {
-    font-size: 20px;
+    font-size: 1.875rem;
     font-weight: bold;
-    margin-bottom: 10px;
+    margin-bottom: .9375rem;
 }
 
 .title-blue {
@@ -58,14 +61,26 @@ body {
 }
 
 .text {
-    font-size: 14px;
-    margin-bottom: 15px;
+    color: #c2c2c2;
+    font-size: 1.25rem;
+    margin-bottom: .9375rem;
     font-style: italic;
     line-height: 1.5;
 }
 
-.more {
-    color: inherit;
+.more-white {
+    color: #111111;
+    padding-bottom: 5px;
+    font-size: 1.25rem;
     text-decoration: none;
-    border-bottom: 1px solid currentColor;
+    border-bottom: .125rem solid #111111 ;
+}
+
+
+.more-blue {
+    color: white;
+    padding-bottom: 5px;
+   font-size: 1.25rem;
+   text-decoration: none;
+   border-bottom: .125rem solid white ;
 }
