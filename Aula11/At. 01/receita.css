@@ -1,0 +1,70 @@
+:root {
+    --cor-primaria: rgb(252, 92, 59);
+    --font-corpo: "Montserrat", sans-serif;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    font-family: var(--font-corpo);
+    background-color: #fcfcfc;
+
+}
+
+header {
+    color: var(--cor-primaria);
+    text-align: center;
+    padding: 3.75rem;
+    
+}
+
+main {
+    display: grid;
+    align-content: center;
+    padding: 1.25rem;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5625rem;
+    
+}
+
+section {
+    padding: 10px;
+    background-color: whitesmoke;
+    box-shadow: 0 0 10px;
+    height: 21.875rem;
+    width: 14.375rem;
+    border-radius: .625rem;
+    align-items: center;
+    line-height: 1.9rem;
+}
+
+img {
+    width: 210px;
+    height: 150px;
+    border-radius: 5px;
+}
+
+h3 {
+    text-transform: capitalize;
+}
+
+p::first-letter {
+ text-transform: capitalize;
+}
+
+button {
+    color: white;
+background-color: var(--cor-primaria);
+width: 7rem;
+height: 3rem;
+border-radius: 10px;
+border: none;
+
+}
