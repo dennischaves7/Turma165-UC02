@@ -1,37 +1,105 @@
 * {
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
+
 body {
     height: 100vh;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f6f7fb;
-    display: grid;
-    grid-template-columns: 18.75rem 1fr;
-    grid-template-rows: auto 1fr auto;
-    grid-template-areas:
-    "header header"
-    "aside main"
-    "footer footer";
+    background-color: #d6d6d6;
+    padding: 1.875rem;
 }
-header{
-    grid-area: header;
 
+#container {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-template-areas: "aside main";
+    max-width: 56.25rem;
+    margin: 2rem auto;
+    background-color: white;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 .625rem rgba(0, 0, 0, 0.1);
+}
+
+aside {
+    grid-area: aside;
+    background-color: #333;
+    color: white;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-top-left-radius: 1.25rem;
+}
+
+img {
+    width: 7.5rem;
+    height: 7.5rem;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+aside h1 {
+    font-size: 1.5rem;
+    margin-bottom: .2rem;
+}
+
+aside p {
+    font-size: .9375rem;
+    margin-bottom: 1.5rem;
+    color: #d6d6d6;
+}
+
+aside h2 {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    margin-bottom: .5rem;
+    align-self: flex-start;
+}
+
+#contato {
+    list-style: none;
+    font-size: .9rem;
+    align-self: flex-start;
+    padding-left: 0;
+}
+
+#habilidades {
+    font-size: .9rem;
+    align-self: flex-start;
+    padding-left: 0;
+    margin-left: .9375rem;
+}
+
+li {
+    color: #d6d6d6;
+    font-weight: 50;
+    margin-bottom: .5rem;
 }
 
 main {
     grid-area: main;
+    background-color: white;
+    padding: 2rem;
+    border-top-right-radius: 1.25rem;
 }
-aside {
-    grid-area: aside;
-    background-color: #243445;
+
+main h2 {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+    color: #243445;
 }
-footer {
-    grid-area: footer;
+
+main h3 {
+    font-size: 1.1rem;
+    margin-top: 1rem;
+    color: #111;
 }
-img {
-    width: 200px;
-    height: 200px;
-    border-radius: 100px;
+
+main p {
+    font-size: .95rem;
+    margin-top: .3rem;
+    margin-bottom: 1rem;
+    line-height: 1.5;
 }
