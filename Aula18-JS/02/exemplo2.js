@@ -26,21 +26,32 @@ function questao4 () {
     let base = prompt('Indique um valor para a base do retângulo')
     let altura = prompt('Indique um valor para a altura do retângulo')
 
-    let perimetro = 2 * (base + altura)
+    let perimetro = (Number(base) + Number(altura)) * 2
     let area = base * altura
 
     alert(`A área do seu perimetro é ${area} e o perimetro é ${perimetro}`)
 }
 
 function questao5 () {
-    let data = prompt('Seu ano de nascimento')
+    let ano = prompt('Seu ano de nascimento')
 
-    let idade = data - 2025
+    let idade = ano - 2025
 
  idade = idade * -1
 
-    alert(`Sua data de nascimento é ${data} e a sua idade é ${idade}`)
+    alert(`Seu ano de nascimento é ${ano} e a sua idade é ${idade}`)
 
 }
 
-questao5()
+function questao6 () {
+    let idade = prompt('Seu idade')
+
+    let ano = idade - 2025
+
+ ano = ano * -1
+
+    alert(`Seu ano de nascimento é ${ano} e a sua idade é ${idade}`)
+
+}
+
+questao6()
