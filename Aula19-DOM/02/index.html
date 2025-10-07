@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Exercicios DOM</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <header>
         <h1></h1>
@@ -15,27 +17,72 @@
             <h2>Questão 01</h2>
             <label for="nome">Informe seu nome:</label>
             <input type="text" name="nome" id="nome">
-            
+
 
             <label for="idade">Informe sua idade:</label>
             <input type="text" name="idade" id="idade">
 
             <label for="cidade">Informe sua cidade:</label>
             <input type="text" name="cidade" id="cidade">
-    
+
             <button onclick="questao1()">Ver Resposta</button>
-            <p id="resposta01"></p>
+            <p class="resposta" id="resposta01"></p>
         </section>
 
         <section>
             <h2>Questão 02</h2>
+            <p class="sobre">Todo valor inserido terá um desconto automático de 20%.</p>
             <label for="preco">Informe um valor</label>
             <input type="text" name="preco" id="preco">
 
             <button onclick="questao2()">Ver Resposta</button>
-            <p id="resposta02"></p>
+            <p class="resposta" id="resposta02"></p>
+        </section>
+
+        <section>
+            <h2>Questão 03</h2>
+            <p class="sobre">O valor inserido em Celsius será convertido automaticamente para Fahrenheit.</p>
+            <label for="number">Informe um número</label>
+            <input type="text" name="number" id="number">
+
+            <button onclick="questao3()">Ver Resposta</button>
+            <p class="resposta" id="resposta03"></p>
+        </section>
+
+        <section>
+            <h2>Questão 04</h2>
+            <p class="sobre">Os valores informados serão usados para calcular a área e o perímetro do retângulo.</p>
+            <label for="base">Informe um número</label>
+            <input type="text" name="base" id="base">
+
+            <label for="altura">Informe um número</label>
+            <input type="text" name="altura" id="altura">
+
+            <button onclick="questao4()">Ver Resposta</button>
+            <p class="resposta" id="resposta04"></p>
+        </section>
+
+        <section>
+            <h2>Questão 05</h2>
+            <p class="sobre">Informe seu ano de nascimento para calcular automaticamente sua idade.</p>
+            <label for="nascimento">Informe seu ano de nascimento:</label>
+            <input type="text" name="nascimento" id="nascimento">
+
+            <button onclick="questao5()">Ver Resposta</button>
+            <p class="resposta" id="resposta05"></p>
+        </section>
+
+        <section>
+            <h2>Questão 06</h2>
+            <p class="sobre">Informe sua idade para descobrir automaticamente o ano em que você nasceu.</p>
+            <label for="idade2">Informe sua idade:</label>
+            <input type="text" name="idade2" id="idade2">
+
+            <button onclick="questao6()">Ver Resposta</button>
+            <p class="resposta" id="resposta06"></p>
         </section>
     </main>
     <script src="script.js"></script>
 </body>
+
 </html>

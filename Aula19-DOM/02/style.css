@@ -1,114 +1,130 @@
-/* Reset básico */
 * {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-  }
-  
-  body {
-    font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
-    background: #f4f6fb;
-    color: #222;
-    min-height: 100vh;
-  }
-  
-  header {
-    background: #2a3a4b;
-    color: #fff;
-    padding: 32px 0 16px 0;
-    text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-  }
-  
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, Helvetica, sans-serif;
+  background: #111;
+  color: #222;
+  min-height: 100vh;
+}
+
+header {
+  background: #2a3a4b;
+  color: #fff;
+  padding: 32px 0 16px 0;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  justify-content: center;
+  align-items: start;
+  padding: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+section {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(42, 58, 75, 0.08);
+  padding: 28px 24px 24px 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+h2 {
+  color: #2a3a4b;
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+.sobre {
+  margin: 10px 0;
+  font-size: 1rem;
+  color: #3a4a5b;
+}
+
+label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 500;
+  color: #3a4a5b;
+  text-align: left;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  border: 1.5px solid #cfd8dc;
+  border-radius: 6px;
+  font-size: 1rem;
+  transition: border 0.2s, box-shadow 0.2s;
+  background: #f9fafb;
+}
+
+input[type="text"]:focus {
+  border-color: #4f8cff;
+  outline: none;
+  box-shadow: 0 0 0 2px #e3f0ff;
+}
+
+
+button {
+  width: 100%;
+  padding: 12px 0;
+  background-color: #222;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s, box-shadow 0.2s;
+  margin-top: 8px;
+  box-shadow: 0 2px 8px rgba(79, 140, 255, 0.08);
+}
+
+button:hover {
+  background-color: #333;
+}
+
+.resposta {
+  margin-top: 18px;
+  font-size: 1rem;
+  color: #2a3a4b;
+  background: #e3f0ff;
+  border-radius: 6px;
+  padding: 12px;
+  min-height: 32px;
+  box-shadow: 0 1px 4px rgba(79, 140, 255, 0.06);
+  text-align: left;
+}
+
+@media (max-width: 900px) {
   main {
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
-    min-height: 80vh;
-    padding: 32px 8px;
-    margin: 0 20px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    padding: 20px;
   }
-  
+}
+
+@media (max-width: 600px) {
   section {
-    background: #fff;
-    border-radius: 12px;
-    box-shadow: 0 4px 24px rgba(42,58,75,0.08);
-    padding: 32px 24px 24px 24px;
-    max-width: 400px;
-    width: 100%;
+    padding: 18px 12px;
   }
-  
+
   h2 {
-    color: #2a3a4b;
-    margin-bottom: 24px;
-    font-size: 1.5rem;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+    font-size: 1.2rem;
   }
-  
-  label {
-    display: block;
-    margin-bottom: 6px;
-    font-weight: 500;
-    color: #3a4a5b;
-  }
-  
-  input[type="text"] {
-    width: 100%;
-    padding: 10px 12px;
-    margin-bottom: 18px;
-    border: 1.5px solid #cfd8dc;
-    border-radius: 6px;
-    font-size: 1rem;
-    transition: border 0.2s, box-shadow 0.2s;
-    background: #f9fafb;
-  }
-  
-  input[type="text"]:focus {
-    border-color: #4f8cff;
-    outline: none;
-    box-shadow: 0 0 0 2px #e3f0ff;
-  }
-  
-  button {
-    width: 100%;
-    padding: 12px 0;
-    background-color: #222;
-    color: #fff;
-    border: none;
-    border-radius: 6px;
-    font-size: 1.1rem;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s, box-shadow 0.2s;
-    margin-top: 8px;
-    box-shadow: 0 2px 8px rgba(79,140,255,0.08);
-  }
-  
-  
-  #resposta01 {
-    margin-top: 20px;
-    font-size: 1.1rem;
-    color: #2a3a4b;
-    background: #e3f0ff;
-    border-radius: 6px;
-    padding: 12px;
-    min-height: 32px;
-    box-shadow: 0 1px 4px rgba(79,140,255,0.06);
-  }
-  
-  /* Responsividade */
-  @media (max-width: 600px) {
-    main {
-      padding: 16px 2px;
-    }
-    section {
-      padding: 18px 8px 16px 8px;
-      max-width: 98vw;
-    }
-    h2 {
-      font-size: 1.2rem;
-    }
-  }
-  
+}
