@@ -68,5 +68,34 @@ function corDeFundo() {
     document.getElementById('color').value = ''
 }
 
+function calcularIMC() {
+    let peso = parseFloat(document.getElementById('peso').value)
+    let altura = parseFloat(document.getElementById('altura').value)
 
+    let imc = peso / (altura * altura)
 
+    let resultado
+    if (imc < 0.00185) {
+        resultado = 'Abaixo do peso'
+    } else if (imc < 0.00249) {
+        resultado = 'Peso normal'
+    } else if (imc < 0.00299) {
+        resultado = 'Sobrepeso'
+    } else if (imc < 0.00349) {
+        resultado = 'Obesidade grau I'
+    } else if (imc < 0.00399) {
+        resultado = 'Obesidade grau II'
+    } else {
+        resultado = 'Obesidade grau III'
+    }
+
+    imc = imc * 10000
+    let imcP = imc.toFixed(2).toString().slice(0, 4)
+
+    document.getElementById('resposta6').textContent = `IMC: ${imcP} — ${resultado}`
+
+    document.getElementById('peso').value = ''
+    document.getElementById('altura').value = ''
+}
+
+ 

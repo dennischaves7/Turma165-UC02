@@ -55,10 +55,22 @@ input[type="text"] {
 }
 
 input[type="text"]:focus {
-    border: 1.5px solid #1976d2;
+    border: 1.5px solid #000000;
+}
+
+.imc{
+    width: 60%;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #bdbdbd;
+    border-radius: 6px;
+    outline: none;
+    transition: border 0.2s;
+    margin-bottom: 20px;
 }
 
 button {
+    width: 150px;
     padding: 10px 20px;
     font-size: 1rem;
     background: #414344;
@@ -72,13 +84,13 @@ button {
 
 button:hover,
 button:active {
-    background: #12539a;
+    background: #a3a3a3;
 }
 
 p {
     margin-top: 10px;
     min-height: 1.4em;
-    color: #1976d2;
+    color: #000000;
     font-weight: 500;
     letter-spacing: 0.5px;
 }
