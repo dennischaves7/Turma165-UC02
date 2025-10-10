@@ -1,94 +1,199 @@
-body {
-   background-color: #111;
-    font-family: Arial, sans-serif;
-    margin: 0;
-    min-height: 100vh;
-  }
-  
-  main {
-    max-width: 800px;
-    margin: 40px auto;
-    text-align: center;
-  }
-  
-  .calculator {
-    background: #232136;
-    color: #fff;
-    width: 350px;
-    border-radius: 32px;
-    padding: 24px 20px;
-    box-shadow: 0 8px 24px #0002;
-    display: inline-block;
-  }
-  
-  .display {
-    display: flex;
-    justify-content: right;
-    gap: 20px;
-    min-width: 220px;
-    margin-bottom: 18px;
-    padding: 10px 0 16px 0;
-  }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-  .display p{
-    font-size: 30px;
-  }
-  
-  .button-row {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 12px;
-  }
-  
-  .button {
-    flex: 1;
-    background: #25214d;
-    color: #fff;
-    border: none;
-    margin: 4px;
-    font-size: 1.3rem;
-    padding: 17px 0;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 2px 8px #0002;
-    transition: background 0.2s;
-  }
-  
-  .button:hover {
-    background: #444057;
-  }
-  
-  .button.operator {
-    background: #6c37be;
-    color: #fff;
-  }
-  
-  .button.operator:hover {
-    background: #7d4cef;
-  }
-  
-  .button.special {
-    background: #a94cd6;
-    color: #fff;
-  }
-  
-  .btn.igual {
-    background: #7d4cef;
-    color: #fff;
-  }
-  
-  .button.igual:hover {
-    background: #a94cd6;
-  }
-  
-  .tag {
-    margin-top: 34px;
-    display: inline-block;
-    background: #7d4cef;
-    color: #fff;
-    padding: 8px 26px;
-    border-radius: 28px;
-    font-size: 1.1rem;
-    letter-spacing: 0.08em;
-    font-weight: 600;
-  }
+body {
+  background-color: #000;
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  font-family: Arial, sans-serif;
+  color: #fff;
+  position: relative;
+}
+
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.7) contrast(1.1);
+}
+
+#background-video {
+  transition: opacity 0.6s ease-in-out, transform 0.4s ease;
+}
+
+.video-button {
+  position: fixed;
+  top: 50%;
+  right: -5%;
+  height: 40%;
+  width: 8%;
+  font-size: 40px;
+  transform: translateY(-50%);
+  background: linear-gradient(135deg, #7944e33a, #6d37be71);
+  color: #fff;
+  border: none;
+  border-radius: 3.125rem 0 0 3.125rem;
+  padding: 1.25rem .9375rem;
+  cursor: pointer;
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  z-index: 10;
+  box-shadow: 0 .5rem 2rem rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-button:hover {
+  right: 0;
+  background: linear-gradient(135deg, rgba(120, 80, 220, 0.4), rgba(172, 131, 131, 0.3));
+  box-shadow: 0 .75rem 2.5rem rgba(120, 80, 220, 0.4);
+}
+
+main {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding: 6.25rem 1.25rem 7.5rem;
+  width: 100%;
+}
+
+.calculator {
+  width: 100%;
+  max-width: 21.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 1.5rem;
+  backdrop-filter: blur(1.25rem);
+  padding: 1.875rem 1.5625rem;
+  box-shadow:
+    0 1.25rem 3.75rem rgba(0, 0, 0, 0.5),
+    inset 0 .0625rem 0 rgba(255, 255, 255, 0.1),
+    0 0 3.125rem rgba(100, 60, 180, 0.3);
+  border: .0625rem solid rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease;
+}
+
+.calculator:hover {
+  box-shadow:
+    0 1.5625rem 4.375rem rgba(0, 0, 0, 0.6),
+    inset 0 .0625rem 0 rgba(255, 255, 255, 0.15),
+    0 0 3.75rem rgba(100, 60, 180, 0.4);
+  transform: translateY(-0.3125rem);
+}
+
+.display {
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 1rem;
+  padding: 1.25rem 1.125rem;
+  text-align: right;
+  font-size: 35.2px;
+  font-weight: 500;
+  margin-bottom: 1.25rem;
+  width: 100%;
+  box-shadow:
+    inset 0 .25rem .75rem rgba(0, 0, 0, 0.4),
+    0 .125rem .5rem rgba(255, 255, 255, 0.05);
+  border: .0625rem solid rgba(255, 255, 255, 0.05);
+  min-height: 5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  transition: all 0.2s ease;
+}
+
+#calculo {
+  font-size: 17.6px;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: .25rem;
+  min-height: 1.25rem;
+  font-family: 'Orbitron', monospace;
+  letter-spacing: .0625rem;
+}
+
+#display {
+  font-size: 35.2px;
+  color: #fff;
+  min-height: 1.875rem;
+  font-weight: 400;
+  text-shadow: 0 .0625rem .125rem rgba(0, 0, 0, 0.5);
+}
+
+.button-row {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: .75rem;
+}
+
+.button {
+  flex: 1;
+  background: linear-gradient(145deg, rgba(50, 46, 90, 0.95), rgba(30, 25, 70, 0.95));
+  color: #fff;
+  border: none;
+  margin: 0 .25rem;
+  font-size: 20.8px;
+  padding: 1rem .5rem;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: all 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  box-shadow:
+    0 .25rem .75rem rgba(0, 0, 0, 0.3),
+    inset 0 .0625rem 0 rgba(255, 255, 255, 0.1);
+  font-weight: 500;
+  font-family: 'Orbitron', monospace;
+  letter-spacing: .0313rem;
+  position: relative;
+}
+
+
+.button:hover {
+  background: linear-gradient(145deg, rgba(100, 80, 200, 0.95), rgba(70, 50, 150, 0.95));
+  transform: translateY(-0.1875rem) scale(1.02);
+  box-shadow:
+    0 .375rem 1rem rgba(100, 80, 200, 0.4),
+    inset 0 .0625rem 0 rgba(255, 255, 255, 0.15);
+}
+
+
+.button.operator {
+  background: linear-gradient(135deg, #7a44e3, #6c37be);
+  font-weight: 600;
+  box-shadow: 0 .25rem .75rem rgba(122, 68, 227, 0.4);
+}
+
+.button-operator:hover {
+  background: linear-gradient(135deg, #8c55f0, #7a44e3);
+  box-shadow: 0 .375rem 1rem rgba(140, 85, 240, 0.5);
+}
+
+.button-igual {
+  background: linear-gradient(135deg, #a94cd6, #c46cf0);
+  font-weight: 700;
+  flex: 2;
+  margin-left: .25rem;
+  box-shadow: 0 .375rem 1.25rem rgba(169, 76, 214, 0.5);
+}
+
+.button-igual:hover {
+  background: linear-gradient(135deg, #b86ef0, #d08cff);
+  box-shadow:
+    0 .5rem 1.5rem rgba(184, 110, 240, 0.6),
+    0 0 1.25rem rgba(200, 150, 255, 0.4);
+  transform: translateY(-0.1875rem) scale(1.03);
+}

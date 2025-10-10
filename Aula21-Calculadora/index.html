@@ -2,55 +2,63 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calculadora</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <main>
-        <div class="calculator">
-            <section class="display">
-                <p id="number-1"></p>
-                <p id="operator"></p>
-                <p id="number-2"></p>
-                <p>=</p>
-                <p id="resultado"></p>
-            </section>
-            <section class="button-row">
-                <button class="button operator">CE</button>
-                <button class="button operator">C</button>
-                <button class="button operator">%</button>
-                <button class="button operator">÷</button>
-            </section>
-            <section class="button-row">
-                <button onclick="addValue('7')" class="button">7</button>
-                <button onclick="addValue('8')" class="button">8</button>
-                <button onclick="addValue('9')" class="button">9</button>
-                <button class="button operator">x</button>
-            </section>
-            <section class="button-row">
-                <button onclick="addValue('4')" class="button">4</button>
-                <button onclick="addValue('5')" class="button">5</button>
-                <button onclick="addValue('6')" class="button">6</button>
-                <button  class="button operator">-</button>
-            </section>
-            <section class="button-row">
-                <button  onclick="addValue('1')" class="button">1</button>
-                <button onclick="addValue('2')" class="button">2</button>
-                <button  onclick="addValue('3')" class="button">3</button>
-                <button class="button operator">+</button>
-            </section>
-            <section class="button-row">
-                <button class="button"><</button>
-                <button class="button">0</button>
-                <button class="button">,</button>
-                <button class="button operator igual">=</button>
-            </section>
-        </div>
-    </main>
-    <script src="script.js"></script>
+  <video id="background-video" autoplay loop muted playsinline>
+    <source id="video-source" src="assets/videoBack01.mp4" type="video/mp4" />
+  </video>
+
+  <button  class="video-button" onclick="trocarVideo()"> ⥍ </button>
+
+  <main>
+    <div class="calculator">
+      <section class="display">
+        <p id="calculo"></p>
+        <p id="display"></p>
+      </section>
+
+      <section class="button-row">
+        <button onclick="clearAll()" class="button operator">C</button>
+        <button onclick="backspace()" class="button operator"><<</button>
+        <button onclick="addOperator('%')" class="button operator">%</button>
+        <button onclick="addOperator('÷')" class="button operator">÷</button>
+      </section>
+
+      <section class="button-row">
+        <button onclick="addValue('7')" class="button">7</button>
+        <button onclick="addValue('8')" class="button">8</button>
+        <button onclick="addValue('9')" class="button">9</button>
+        <button onclick="addOperator('×')" class="button operator">×</button>
+      </section>
+
+      <section class="button-row">
+        <button onclick="addValue('4')" class="button">4</button>
+        <button onclick="addValue('5')" class="button">5</button>
+        <button onclick="addValue('6')" class="button">6</button>
+        <button onclick="addOperator('-')" class="button operator">−</button>
+      </section>
+
+      <section class="button-row">
+        <button onclick="addValue('1')" class="button">1</button>
+        <button onclick="addValue('2')" class="button">2</button>
+        <button onclick="addValue('3')" class="button">3</button>
+        <button onclick="addOperator('+')" class="button operator">+</button>
+      </section>
+
+      <section class="button-row">
+        <button onclick="addValue('0')" class="button">0</button>
+        <button onclick="addValue('.')" class="button">.</button>
+        <button onclick="calculate()" class="button operator igual">=</button>
+      </section>
+    </div>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 
 </html>
