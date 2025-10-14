@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Prática</h1>
+
+    <label for="x">Digite um valor para X</label>
+    <input type="text" id="x">
+    <label for="y">Digite um valor para Y</label>
+    <input type="text" id="y">
+    <label for="z">Digite um valor para Z</label>
+    <input type="text" id="z">
+
+    <label for="select">Selecione uma média para calcular:</label>
+    <select name="select" id="tipoMedia">
+        <option value="aritimetica">Aritimética</option>
+        <option value="geometrica">Geométrica</option>
+        <option value="ponderada">Ponderada</option>
+    </select>
+    <button onclick="calcular()">Calcular</button>
+    <p id="result"></p>
+
+    <script src="script.js"></script>
+</body>
+</html>
