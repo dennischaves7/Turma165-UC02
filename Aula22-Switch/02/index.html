@@ -7,23 +7,50 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Prática</h1>
+    <header>
+        <h1>Prática</h1>
+    </header>
+    <main>
+        
+        <section>
+           
 
-    <label for="x">Digite um valor para X</label>
-    <input type="text" id="x">
-    <label for="y">Digite um valor para Y</label>
-    <input type="text" id="y">
-    <label for="z">Digite um valor para Z</label>
-    <input type="text" id="z">
+            <label for="x">Digite um valor para X</label>
+            <input type="text" id="x">
+            <label for="y">Digite um valor para Y</label>
+            <input type="text" id="y">
+            <label for="z">Digite um valor para Z</label>
+            <input type="text" id="z">
+        
+            <label for="select">Selecione uma média para calcular:</label>
+            <select name="select" id="tipoMedia">
+                <option value="aritimetica">Aritimética</option>
+                <option value="geometrica">Geométrica</option>
+                <option value="ponderada">Ponderada</option>
+            </select>
+            <button onclick="calcular()">Calcular</button>
+            <p id="result"></p>
+        </section>
+       <section>
+        <label for="num01">Digite um valor</label>
+        <input type="text" id="num01">
+        <label for="num02">Digite um valor</label>
+        <input type="text" id="num02">
+        <form id="operacoes">
+            <label><input type="checkbox" name="op" value="+"> + </label>
+            <label><input type="checkbox" name="op" value="-"> - </label>
+            <label><input type="checkbox" name="op" value="*"> x </label>
+            <label><input type="checkbox" name="op" value="/"> / </label>
+          </form>
+          
+       
+       
 
-    <label for="select">Selecione uma média para calcular:</label>
-    <select name="select" id="tipoMedia">
-        <option value="aritimetica">Aritimética</option>
-        <option value="geometrica">Geométrica</option>
-        <option value="ponderada">Ponderada</option>
-    </select>
-    <button onclick="calcular()">Calcular</button>
-    <p id="result"></p>
+        <button onclick="matematica()">Calcular</button>
+            <p id="result2"></p>
+       </section>
+    </main>
+    
 
     <script src="script.js"></script>
 </body>

@@ -1,37 +1,30 @@
 body {
+    display: flex;
+    flex-direction: column;
     background: linear-gradient(135deg, #f9f9f9 0%, #e3eafc 100%);
     min-height: 100vh;
     font-family: 'Segoe UI', Arial, sans-serif;
     color: #222;
     margin: 0;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
   }
-  
-  form {
-    background: #fff;
-    border-radius: 14px;
-    box-shadow: 0 8px 32px rgba(44, 62, 80, 0.15);
-    padding: 36px 32px 28px 32px;
-    width: 100%;
-    max-width: 340px;
+  main {
     display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    transition: box-shadow 0.2s;
+    
   }
-  
-  form:hover {
-    box-shadow: 0 12px 36px rgba(44, 62, 80, 0.24);
+
+  section {
+    display: flex;
+    flex-flow: column;
+    margin-left: 20px;
   }
-  
+
   h1 {
     text-align: center;
     margin-bottom: 30px;
     letter-spacing: 0.5px;
-    color: #4361ee;
+    color: #161616;
     font-weight: 700;
   }
   
@@ -43,7 +36,7 @@ body {
     letter-spacing: 0.2px;
   }
   
-  input[type="text"], select {
+  input, select {
     padding: 12px;
     border: 1px solid #d1d9e6;
     border-radius: 6px;
@@ -54,17 +47,13 @@ body {
     transition: border-color 0.2s, box-shadow 0.2s;
   }
   
-  input[type="text"]:focus, select:focus {
-    border-color: #4361ee;
-    box-shadow: 0 0 0 2px #e4ecfa;
-  }
-  
+
   button {
     margin-top: 22px;
     padding: 12px;
     border: none;
     border-radius: 6px;
-    background: linear-gradient(90deg, #4361ee 0%, #4891ff 100%);
+    background: linear-gradient(90deg, #424242 0%, #000000 100%);
     color: #fff;
     font-weight: 700;
     font-size: 16px;
@@ -74,10 +63,6 @@ body {
     box-shadow: 0 2px 10px rgba(67, 97, 238, 0.12);
   }
   
-  button:hover {
-    background: linear-gradient(90deg, #4891ff 0%, #4361ee 100%);
-    transform: translateY(-1px) scale(1.03);
-  }
   
   #result {
     margin-top: 26px;
@@ -92,14 +77,3 @@ body {
     letter-spacing: 0.2px;
     box-shadow: 0 1px 6px rgba(67, 97, 238, 0.04);
   }
-  
-  @media (max-width: 480px) {
-    form {
-      padding: 22px 5vw 18px 5vw;
-      max-width: 94vw;
-    }
-    h1 {
-      font-size: 1.3rem;
-    }
-  }
-  
