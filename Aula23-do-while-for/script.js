@@ -21,7 +21,7 @@ function for01() {
 function for02() {
     let result2 = '';
     for (let i = 0; i <= 20; i += 2) {
-        result2 += i + ","
+        result2 += i + "  "
     }
     document.getElementById("result2").textContent = result2
 }
