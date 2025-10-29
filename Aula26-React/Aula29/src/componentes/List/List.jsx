@@ -1,15 +1,27 @@
-// src/components/List.jsx
-import Livro from './Livro';
+import Livro from "../Livro/livro";
 
-function List({ livros }) {
-    return (
-        <div>
-            {livros.map((livro, idx) => (
-                <Livro key={idx} {...livro}>
-                    {livro.resenha && <p>{livro.resenha}</p>}
-                </Livro>
-            ))}
-        </div>
-    );
+export default function List({ livros = [] }) {
+  return (
+    <>
+      <div>
+        {livros.length > 0 ? (
+          livros.map((liv, index) => (
+            <Livro
+              key={index}
+              titulo={liv.titulo}
+              autor={liv.autor}
+              ano={liv.ano}
+              genero={liv.genero}
+              capa={liv.capa}
+              disponivel={liv.disponivel}
+              badge={liv.badge}
+              children={liv.children}
+            />
+          ))
+        ) : (
+          <p>Nenhum livro cadastrado</p> 
+        )}
+      </div>
+    </>
+  );
 }
-export default List;

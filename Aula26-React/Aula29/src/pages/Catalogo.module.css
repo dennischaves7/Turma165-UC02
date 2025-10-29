@@ -1,0 +1,25 @@
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #8d4d4d;
+    min-height: 100vh;
+  }
+  
+  .title {
+    text-align: center;
+    font-size: 28px;
+    color: #222;
+    margin-bottom: 24px;
+  }
+  
+  .list {
+    background-color: rgb(86, 24, 92);
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  
