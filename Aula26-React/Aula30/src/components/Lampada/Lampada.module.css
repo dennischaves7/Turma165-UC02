@@ -1,0 +1,38 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+
+.lampadacontainer {
+    background: #23272f;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .lampadaimg {
+    width: 120px;
+    height: auto;
+    margin-bottom: 32px;
+  }
+  
+  .lampadabtn {
+    width: 200px;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    font-family: inherit;
+    color: #fff;
+    background: #444c5e;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+  }
+  
+  .lampadabtn:hover {
+    background: #6372a2;
+  }
+  
